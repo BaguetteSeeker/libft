@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:08:48 by epinaud           #+#    #+#             */
-/*   Updated: 2024/05/25 21:28:52 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/05/25 22:30:36 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,23 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	i = 0;
 	cpdest = dest;
 	cpsrc = src;
-	while (i < n)
+	
+	if (cpdest < cpsrc)
 	{
-		cpdest[i] = cpsrc[i];
-		i++;
+		while (i < n)
+		{
+			cpdest[i] = cpsrc[i];
+			i++;
+		}
+	}
+	else
+	{
+		n--;
+		while (n > -1)
+		{
+			cpdest[n] = cpsrc[n];
+			n--;
+		}
 	}
 	return (dest);
 }
