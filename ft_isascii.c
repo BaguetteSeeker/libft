@@ -6,11 +6,11 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 17:55:50 by epinaud           #+#    #+#             */
-/*   Updated: 2024/05/25 17:57:35 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/05/28 17:49:31 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

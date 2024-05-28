@@ -6,21 +6,33 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 18:45:30 by epinaud           #+#    #+#             */
-/*   Updated: 2024/05/27 20:53:14 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/05/28 17:41:22 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_atoi(const char *nptr)
 {
-	int	i;
+	size_t	i;
 	int	sum;
+	int	sign;
 
 	i = 0;
 	sum = 0;
-	while (nptr[i] >= '0' && nptr[i] <= '9')
+	sign = 1;
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
+		i++;
+	if(nptr[i] == '+' || nptr[i] == '-')
 	{
-		sum *= 10 + nptr[i] - 48;
+		if (nptr[i] == '-')
+			sign = -sign;
 		i++;
 	}
-	return (sum);
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		sum = sum * 10 + nptr[i] - 48;
+		i++;
+	}
+	return (sum *= sign);
 }

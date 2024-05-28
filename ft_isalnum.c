@@ -6,13 +6,13 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 15:06:17 by epinaud           #+#    #+#             */
-/*   Updated: 2024/05/25 18:45:53 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/05/28 17:50:47 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char c)
+int	ft_isalnum(int c)
 {
-	if ((c >= 'a' && c <= 'z') && (c >= 'A' && c <= 'Z'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	else if (c >= '0' && c <= '9')
 		return (1);
