@@ -1,0 +1,5 @@
+libftTester/
+libft.a
+*.swo
+*.swp
+*.o
