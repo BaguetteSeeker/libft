@@ -1,5 +1,8 @@
+.gitignore
 libftTester/
 libft.a
 *.swo
 *.swp
+*.swn
 *.o
+*.trash
