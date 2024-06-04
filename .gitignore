@@ -6,3 +6,4 @@ libft.a
 *.swn
 *.o
 *.trash
+*_bonus.c

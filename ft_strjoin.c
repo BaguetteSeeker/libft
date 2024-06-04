@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 15:41:48 by epinaud           #+#    #+#             */
-/*   Updated: 2024/05/29 16:43:45 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/06/04 18:57:02 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	j;
 	char	*s3;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
 	s3len = s1len + s2len;
@@ -40,5 +42,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 		j++;
 	}
+	s3[i] = '\0';
 	return (s3);
 }
