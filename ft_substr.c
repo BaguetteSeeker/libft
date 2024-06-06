@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 17:58:28 by epinaud           #+#    #+#             */
-/*   Updated: 2024/06/01 20:43:38 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/06/06 21:43:44 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start > slen)
 		start = slen;
 	substrlen = slen - start;
-	substrlen = len < substrlen ? len : substrlen;
+	if (substrlen > len)
+		substrlen = len;
 	scpy = malloc((substrlen + 1) * sizeof(char));
 	if (scpy == NULL)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:08:48 by epinaud           #+#    #+#             */
-/*   Updated: 2024/05/26 14:10:30 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/06/06 23:51:34 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char		*cpdest;
 	const char	*cpsrc;
 
+	if (!dest)
+		return (NULL);
 	i = 0;
 	cpdest = dest;
 	cpsrc = src;
@@ -30,12 +32,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		}
 	}
 	else
-	{
-		while (n > 0)
-		{
-			n--;
+		while (n-- > 0)
 			cpdest[n] = cpsrc[n];
-		}
-	}
 	return (dest);
 }

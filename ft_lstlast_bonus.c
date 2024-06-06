@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 22:37:55 by epinaud           #+#    #+#             */
-/*   Updated: 2024/06/05 23:36:24 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/06/06 22:31:46 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
-		return lst;
+		return (lst);
 	while (lst->next)
 		lst = lst->next;
 	return (lst);

@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:43:25 by epinaud           #+#    #+#             */
-/*   Updated: 2024/06/04 18:25:28 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/06/06 22:29:46 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	int	i;
+	int		i;
 	char	*str;
 
 	if (!s)

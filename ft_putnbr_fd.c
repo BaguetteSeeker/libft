@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 18:47:14 by epinaud           #+#    #+#             */
-/*   Updated: 2024/06/05 20:29:16 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/06/06 21:21:09 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		if (n < 0)
 		{
-			ft_putchar_fd('-',  fd);
+			ft_putchar_fd('-', fd);
 			n = -n;
 		}
 		if (n > 9)

@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 19:26:03 by epinaud           #+#    #+#             */
-/*   Updated: 2024/06/05 16:50:10 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/06/06 22:30:47 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*list;
-	
+
 	list = malloc(sizeof(t_list));
 	if (!list)
 		return (NULL);

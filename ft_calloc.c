@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 15:02:01 by epinaud           #+#    #+#             */
-/*   Updated: 2024/05/28 17:23:16 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/06/06 21:39:33 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (NULL);
 	arr = (void *)malloc(nmemb * size);
 	if (arr == NULL)
-		return	(NULL);
+		return (NULL);
 	ft_bzero(arr, nmemb * size);
 	return (arr);
 }

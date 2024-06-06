@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 18:36:30 by epinaud           #+#    #+#             */
-/*   Updated: 2024/06/04 19:01:17 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/06/06 21:20:10 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while(*s)
+	while (*s)
 		ft_putchar_fd(*s++, fd);
 }

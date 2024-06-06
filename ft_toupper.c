@@ -6,14 +6,17 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 21:41:57 by epinaud           #+#    #+#             */
-/*   Updated: 2024/05/26 21:49:44 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/06/07 00:12:46 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(char c)
 {
-	if (!(c >= 'a' && c <= 'z'))
-		return (c);
+	unsigned char	cc;
+
+	cc = (unsigned char)c;
+	if (!(cc >= 'a' && cc <= 'z'))
+		return (cc);
 	else
-		return (c - 32);
+		return (cc - 32);
 }

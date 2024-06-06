@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:08:48 by epinaud           #+#    #+#             */
-/*   Updated: 2024/05/25 21:28:16 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/06/06 23:52:05 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	cpdest = dest;
 	cpsrc = src;
-	while (i < n)
+	while (i < n && dest)
 	{
 		cpdest[i] = cpsrc[i];
 		i++;
