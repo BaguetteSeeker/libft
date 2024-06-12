@@ -6,7 +6,7 @@
 #    By: epinaud <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 16:30:14 by epinaud           #+#    #+#              #
-#    Updated: 2024/06/06 23:40:20 by epinaud          ###   ########.fr        #
+#    Updated: 2024/06/12 20:17:42 by epinaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,4 +36,4 @@ fclean:  clean
 
 re: fclean $(NAME)
 
-.PHONY:  all clean fclean re
+.PHONY:  all clean fclean re bonus
