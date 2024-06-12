@@ -45,7 +45,7 @@ char	**ft_split(const char *s, char c)
 			s++;
 		if (!*s)
 			break ;
-		if (!strchr(s, c))
+		if (!ft_strchr(s, c))
 			wlen = ft_strlen(s);
 		else
 			wlen = ft_strchr(s, c) - s;

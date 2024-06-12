@@ -6,17 +6,16 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 21:41:57 by epinaud           #+#    #+#             */
-/*   Updated: 2024/06/07 00:13:00 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/06/12 18:06:08 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(char c)
-{
-	unsigned char	cc;
+#include "libft.h"
 
-	cc = (unsigned char)c;
-	if (!(cc >= 'A' && cc <= 'Z'))
-		return (cc);
+int	ft_tolower(int c)
+{
+	if (!(c >= 'A' && c <= 'Z'))
+		return (c);
 	else
-		return (cc + 32);
+		return (c + 32);
 }

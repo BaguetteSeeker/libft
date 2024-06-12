@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 16:28:47 by epinaud           #+#    #+#             */
-/*   Updated: 2024/06/06 23:19:44 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/06/12 17:56:12 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	while (i < n && haystack[i] != '\0')
 	{
 		j = 0;
-		while (i + j < n && needle[j] == haystack[i + j])
+		while (i + j < n && needle[j] == haystack[i + j] && needle[j])
 			j++;
 		if (needle[j] == '\0')
 			return ((char *)(&haystack[i]));
