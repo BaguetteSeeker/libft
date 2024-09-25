@@ -1,9 +1,9 @@
-.gitignore
 libftTester/
-libft.a
+.obj/
+*.a
 *.swo
 *.swp
 *.swn
 *.o
-*.trash
 *.json
+*.vscode
