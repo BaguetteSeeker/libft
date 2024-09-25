@@ -6,11 +6,11 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2024/06/12 17:47:58 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/09/02 13:33:47 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef  LIBFT_H
+#ifndef LIBFT_H
 # define LIBFT_H
 
 # include <stdlib.h>
@@ -18,6 +18,7 @@
 # include <stdio.h>
 # include <string.h>
 # include <stdint.h>
+# include <limits.h>
 
 //Part 1
 int		ft_isdigit(int c);
@@ -55,7 +56,20 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_fd(long int n, int fd);
+
+//Personnal add-ons
+int		ft_minint(int a, int b);
+int		ft_maxint(int a, int b);
+size_t	ft_count_digits(char *str);
+size_t	ft_nbrlen(long int nbr);
+size_t	ft_nbrblen(unsigned long nbr, size_t baselen);
+size_t	ft_nbrdig(long int nbr);
+size_t	ft_putnbr_base_fd(unsigned long n, char *base, int fd);
+int		ft_check_dup(char *str);
+int		ft_atoi_base(char *str, char *base);
+char	*ft_itoa_base(long int n, char *base, ...);
+void	ft_putstrcap_fd(char *s, size_t cap, int fd);
 
 //Bonus
 typedef struct s_list

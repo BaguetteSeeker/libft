@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/28 17:58:28 by epinaud           #+#    #+#             */
-/*   Updated: 2024/09/02 14:07:12 by epinaud          ###   ########.fr       */
+/*   Created: 2024/06/22 01:19:34 by epinaud           #+#    #+#             */
+/*   Updated: 2024/06/22 01:28:28 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+size_t	ft_nbrlen(long int nbr)
 {
-	char	*substr;
-	size_t	substrlen;
-	size_t	i;
+	size_t	count;
 
-	substrlen = ft_strlen(s);
-	if (start > substrlen)
-		start = substrlen;
-	substrlen = substrlen - start;
-	if (substrlen > len)
-		substrlen = len;
-	substr = malloc(sizeof(char) * (substrlen + 1));
-	if (!substr)
-		return (NULL);
-	i = 0;
-	while (i < substrlen)
+	count = 0;
+	if (nbr == 0)
+		return (1);
+	if (nbr < 0)
 	{
-		substr[i] = s[i + start];
-		i++;
+		nbr = -nbr;
+		count++;
 	}
-	substr[i] = '\0';
-	return (substr);
+	while (nbr > 0)
+	{
+		nbr /= 10;
+		count++;
+	}
+	return (count);
 }
