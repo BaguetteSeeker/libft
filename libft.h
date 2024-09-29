@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2024/09/29 17:35:44 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/09/29 17:57:23 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char	*ft_itoa_base(long int n, char *base, ...);
 void	ft_putstrcap_fd(char *s, size_t cap, int fd);
 
 //Memory
-char	**clean_memtree(char **ptr);
+char	**ft_clean_memtree(char **ptr);
 
 //Bonus
 typedef struct s_list

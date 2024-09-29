@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 17:19:36 by epinaud           #+#    #+#             */
-/*   Updated: 2024/09/29 17:29:06 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/09/29 17:57:55 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 char    **clean_memtree(char **ptr)
 {
-	size_t  i;
-
-	i = 0;
 	while (*ptr)
 		free(*ptr++);
 	free(ptr);
