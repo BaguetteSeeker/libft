@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_base_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/04 18:47:14 by epinaud           #+#    #+#             */
-/*   Updated: 2024/09/12 21:49:34 by epinaud          ###   ########.fr       */
+/*   Created: 2024/06/26 15:02:09 by epinaud           #+#    #+#             */
+/*   Updated: 2024/09/12 21:44:49 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_putnbr_fd(long int n, int fd, ...)
+size_t	ft_putnbr_base_fd(unsigned long n, char *base, int fd)
 {
-	va_list	no_sign;
+	size_t	blen;
+	size_t	nlen;
 
-	va_start(no_sign, fd);
-	if (n < 0 && !va_arg(no_sign, int))
-		ft_putchar_fd('-', 1);
-	if (n == 2147483648)
-		ft_putstr_fd("2147483648", fd);
-	else
-	{
-		if (n < 0)
-			n = -n;
-		if (n > 9)
-			ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd(n % 10 + 48, fd);
-	}
-	va_end(no_sign);
+	if (ft_base_integrity(base))
+		return (0);
+	blen = ft_strlen(base);
+	nlen = 0;
+	if (n >= blen)
+		nlen = ft_putnbr_base_fd(n / blen, base, fd);
+	ft_putchar_fd(base[n % blen], fd);
+	nlen++;
+	return (nlen);
 }

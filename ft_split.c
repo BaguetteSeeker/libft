@@ -6,13 +6,13 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 19:43:19 by epinaud           #+#    #+#             */
-/*   Updated: 2024/06/01 21:31:53 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/09/29 17:18:51 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	wcount(const char *s, char c)
+static int	wrd_count(const char *s, char c)
 {
 	int	occ;
 
@@ -31,11 +31,11 @@ static int	wcount(const char *s, char c)
 
 char	**ft_split(const char *s, char c)
 {
-	size_t	wlen;
+	size_t	wrdlen;
 	int		i;
 	char	**slist;
 
-	slist = malloc(sizeof(char *) * (wcount(s, c) + 1));
+	slist = malloc(sizeof(char *) * (wrd_count(s, c) + 1));
 	if (!s || !slist)
 		return (NULL);
 	i = 0;
@@ -46,12 +46,13 @@ char	**ft_split(const char *s, char c)
 		if (!*s)
 			break ;
 		if (!ft_strchr(s, c))
-			wlen = ft_strlen(s);
+			wrdlen = ft_strlen(s);
 		else
-			wlen = ft_strchr(s, c) - s;
-		slist[i] = ft_substr(s, 0, wlen);
-		i++;
-		s += wlen;
+			wrdlen = ft_strchr(s, c) - s;
+		slist[i++] = ft_substr(s, 0, wrdlen);
+		if (!slist[i++])
+			return (ft_clean_memtree(slist));
+		s += wrdlen;
 	}
 	slist[i] = NULL;
 	return (slist);

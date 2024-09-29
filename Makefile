@@ -6,7 +6,7 @@
 #    By: epinaud <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 16:30:14 by epinaud           #+#    #+#              #
-#    Updated: 2024/09/25 18:32:48 by epinaud          ###   ########.fr        #
+#    Updated: 2024/09/29 15:37:58 by epinaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,7 @@ OBJ = $(addprefix $(OBJ_DIR)/, $(LIB_SRC:.c=.o))
 
 OBJ_ALL = $(addprefix $(OBJ_DIR)/, $(LIB_SRC:.c=.o) $(BONUS_SRC:.c=.o))
 
-CFLAGS = -Wall -Wextra -Werror -I . -ggdb3
+CFLAGS = -Wall -Wextra -Werror -I .
 
 NAME = libft.a
 

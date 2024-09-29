@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_base_integrity.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/04 18:47:14 by epinaud           #+#    #+#             */
-/*   Updated: 2024/09/12 21:49:34 by epinaud          ###   ########.fr       */
+/*   Created: 2024/07/05 17:54:34 by epinaud           #+#    #+#             */
+/*   Updated: 2024/07/10 13:51:37 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(long int n, int fd, ...)
+int	ft_base_integrity(char *base)
 {
-	va_list	no_sign;
-
-	va_start(no_sign, fd);
-	if (n < 0 && !va_arg(no_sign, int))
-		ft_putchar_fd('-', 1);
-	if (n == 2147483648)
-		ft_putstr_fd("2147483648", fd);
-	else
+	if (!*base || !*base + 1 || ft_check_dup(base))
+		return (0);
+	while (*base)
 	{
-		if (n < 0)
-			n = -n;
-		if (n > 9)
-			ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd(n % 10 + 48, fd);
+		if (ft_strchr("+- \t\n\v\f\r", *base))
+			return (0);
+		base++;
 	}
-	va_end(no_sign);
+	return (1);
 }

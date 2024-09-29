@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_check_dup.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/04 18:47:14 by epinaud           #+#    #+#             */
-/*   Updated: 2024/09/12 21:49:34 by epinaud          ###   ########.fr       */
+/*   Created: 2024/07/05 18:43:42 by epinaud           #+#    #+#             */
+/*   Updated: 2024/07/05 19:00:05 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putnbr_fd(long int n, int fd, ...)
+int	ft_check_dup(char *str)
 {
-	va_list	no_sign;
+	int	i;
+	int	j;
 
-	va_start(no_sign, fd);
-	if (n < 0 && !va_arg(no_sign, int))
-		ft_putchar_fd('-', 1);
-	if (n == 2147483648)
-		ft_putstr_fd("2147483648", fd);
-	else
+	i = 0;
+	j = 1;
+	while (str[i] != '\0')
 	{
-		if (n < 0)
-			n = -n;
-		if (n > 9)
-			ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd(n % 10 + 48, fd);
+		j = i + 1;
+		while (str[j] != '\0')
+		{
+			if (str[i] == str[j])
+				return (str[i]);
+			j++;
+		}
+		i++;
 	}
-	va_end(no_sign);
+	return (0);
 }

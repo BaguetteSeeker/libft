@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_clean_memtree.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/04 18:47:14 by epinaud           #+#    #+#             */
-/*   Updated: 2024/09/12 21:49:34 by epinaud          ###   ########.fr       */
+/*   Created: 2024/09/29 17:19:36 by epinaud           #+#    #+#             */
+/*   Updated: 2024/09/29 17:29:06 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(long int n, int fd, ...)
+char    **clean_memtree(char **ptr)
 {
-	va_list	no_sign;
+	size_t  i;
 
-	va_start(no_sign, fd);
-	if (n < 0 && !va_arg(no_sign, int))
-		ft_putchar_fd('-', 1);
-	if (n == 2147483648)
-		ft_putstr_fd("2147483648", fd);
-	else
-	{
-		if (n < 0)
-			n = -n;
-		if (n > 9)
-			ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd(n % 10 + 48, fd);
-	}
-	va_end(no_sign);
+	i = 0;
+	while (*ptr)
+		free(*ptr++);
+	free(ptr);
+	return (NULL);
 }
