@@ -6,7 +6,7 @@
 #    By: epinaud <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 16:30:14 by epinaud           #+#    #+#              #
-#    Updated: 2024/09/29 17:55:26 by epinaud          ###   ########.fr        #
+#    Updated: 2024/09/30 12:57:40 by epinaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,11 @@ LIB_SRC = ft_isalpha.c \
 		ft_min_max.c \
 		ft_clean_memtree.c \
 
+PRINTF_FILES = printf.c \
+		ft_print_argument.c \
+		ft_parse_directives.c \
+		ft_print_directives.c \
+
 BONUS_SRC = ft_lstnew_bonus.c \
 			ft_lstadd_front_bonus.c \
 			ft_lstsize_bonus.c \
@@ -62,15 +67,17 @@ BONUS_SRC = ft_lstnew_bonus.c \
 			ft_lstiter_bonus.c \
 			ft_lstmap_bonus.c \
   
-OBJ = $(addprefix $(OBJ_DIR)/, $(LIB_SRC:.c=.o))
+OBJ = $(addprefix $(OBJ_DIR)/, $(LIB_SRC:.c=.o) $(PRINTF_FILES:.c=.o))
 
 OBJ_ALL = $(addprefix $(OBJ_DIR)/, $(LIB_SRC:.c=.o) $(BONUS_SRC:.c=.o))
 
-CFLAGS = -Wall -Wextra -Werror -I .
+CFLAGS = -Wall -Wextra -Werror -I.
 
 NAME = libft.a
 
 OBJ_DIR = .obj
+
+VPATH = printf
 
 $(OBJ_DIR)/%.o : %.c
 	$(CC) -c $(CFLAGS) -o $@ $<
