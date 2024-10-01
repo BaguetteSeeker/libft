@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2024/10/01 19:32:13 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/10/02 00:59:53 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,11 @@
 # include <stdint.h>
 # include <limits.h>
 # include <stdarg.h>
-# include "printf/printf.h"
 # include <errno.h>
 
 # ifndef  GNL_BUFFSIZ
 #  define GNL_BUFFSIZ 100
 # endif
-char	*get_next_line(int fd);
 
 //Part 1
 int		ft_isdigit(int c);
@@ -98,4 +96,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+# include "printf/printf.h"
+char	*get_next_line(int fd);
 #endif

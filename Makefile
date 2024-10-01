@@ -6,7 +6,7 @@
 #    By: epinaud <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 16:30:14 by epinaud           #+#    #+#              #
-#    Updated: 2024/10/01 19:31:30 by epinaud          ###   ########.fr        #
+#    Updated: 2024/10/02 01:02:47 by epinaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ LIB_SRC = ft_isalpha.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
+		ft_putnbr_base_fd.c \
 		ft_base_integrity.c \
 		ft_check_dup.c \
 		ft_min_max.c \
@@ -57,7 +58,7 @@ PRINTF_FILES = printf.c \
 		ft_parse_directives.c \
 		ft_print_directives.c \
 
-GNL = get_next_line.c
+GNL = get_next_line.c \
 
 BONUS_SRC = ft_lstnew_bonus.c \
 			ft_lstadd_front_bonus.c \
