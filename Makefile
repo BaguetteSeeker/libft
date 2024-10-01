@@ -6,7 +6,7 @@
 #    By: epinaud <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 16:30:14 by epinaud           #+#    #+#              #
-#    Updated: 2024/09/30 12:57:40 by epinaud          ###   ########.fr        #
+#    Updated: 2024/10/01 18:30:33 by epinaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,8 @@ PRINTF_FILES = printf.c \
 		ft_parse_directives.c \
 		ft_print_directives.c \
 
+GNL = get_next_line.c
+
 BONUS_SRC = ft_lstnew_bonus.c \
 			ft_lstadd_front_bonus.c \
 			ft_lstsize_bonus.c \
@@ -67,7 +69,7 @@ BONUS_SRC = ft_lstnew_bonus.c \
 			ft_lstiter_bonus.c \
 			ft_lstmap_bonus.c \
   
-OBJ = $(addprefix $(OBJ_DIR)/, $(LIB_SRC:.c=.o) $(PRINTF_FILES:.c=.o))
+OBJ = $(addprefix $(OBJ_DIR)/, $(LIB_SRC:.c=.o) $(PRINTF_FILES:.c=.o) $(GNL:.c=.o))
 
 OBJ_ALL = $(addprefix $(OBJ_DIR)/, $(LIB_SRC:.c=.o) $(BONUS_SRC:.c=.o))
 
