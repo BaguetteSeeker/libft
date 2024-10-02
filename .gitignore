@@ -4,6 +4,7 @@ libftTester/
 *.swo
 *.swp
 *.swn
+*.gch
 *.o
 *.json
 *.vscode
