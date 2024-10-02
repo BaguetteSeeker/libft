@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2024/10/02 00:59:53 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/10/02 12:47:00 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <limits.h>
 # include <stdarg.h>
 # include <errno.h>
+# include "printf/printf.h"
 
 # ifndef  GNL_BUFFSIZ
 #  define GNL_BUFFSIZ 100
@@ -97,6 +98,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-# include "printf/printf.h"
 char	*get_next_line(int fd);
 #endif

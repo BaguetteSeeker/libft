@@ -6,7 +6,7 @@
 #    By: epinaud <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 16:30:14 by epinaud           #+#    #+#              #
-#    Updated: 2024/10/02 01:02:47 by epinaud          ###   ########.fr        #
+#    Updated: 2024/10/02 12:46:51 by epinaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,7 @@ OBJ = $(addprefix $(OBJ_DIR)/, $(LIB_SRC:.c=.o) $(PRINTF_FILES:.c=.o) $(GNL:.c=.
 
 OBJ_ALL = $(addprefix $(OBJ_DIR)/, $(LIB_SRC:.c=.o) $(BONUS_SRC:.c=.o))
 
-CFLAGS = -Wall -Wextra -Werror -I. -I/printf
+CFLAGS = -Wall -Wextra -Werror -I. -I/printf -Iprintf -Iprintf/ -Ilibft/ -Ilibft/printf
 
 NAME = libft.a
 
