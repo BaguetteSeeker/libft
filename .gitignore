@@ -1,10 +1,11 @@
-libftTester/
 .obj/
+main.c
 *.a
+*.o
 *.swo
 *.swp
 *.swn
 *.gch
-*.o
+*.out
 *.json
 *.vscode

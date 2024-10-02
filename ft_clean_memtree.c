@@ -6,13 +6,13 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 17:19:36 by epinaud           #+#    #+#             */
-/*   Updated: 2024/09/29 17:57:55 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/10/02 15:56:20 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    **clean_memtree(char **ptr)
+char	**clean_memtree(char **ptr)
 {
 	while (*ptr)
 		free(*ptr++);
