@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 20:00:18 by epinaud           #+#    #+#             */
-/*   Updated: 2024/10/01 18:23:30 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/10/04 02:43:29 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	read_errchk(int read_return)
 	else
 		return (0);
 	return (1);
-}	
+}
 
 static char	*fetch_file_content(int fd)
 {

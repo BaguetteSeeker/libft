@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2024/10/02 12:47:00 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/10/04 02:43:35 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # include <errno.h>
 # include "printf/printf.h"
 
-# ifndef  GNL_BUFFSIZ
+# ifndef GNL_BUFFSIZ
 #  define GNL_BUFFSIZ 100
 # endif
 

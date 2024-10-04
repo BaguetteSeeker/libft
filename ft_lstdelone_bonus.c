@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 23:49:59 by epinaud           #+#    #+#             */
-/*   Updated: 2024/06/06 00:22:07 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/10/04 02:43:49 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	{
 		del(lst->content);
 		free(lst);
-	}	
+	}
 }
