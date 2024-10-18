@@ -6,13 +6,14 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2024/10/16 16:26:09 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/10/17 12:41:04 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# define _DEFAULT_SOURCE
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
