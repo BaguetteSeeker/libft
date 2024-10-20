@@ -6,7 +6,7 @@
 #    By: epinaud <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 16:30:14 by epinaud           #+#    #+#              #
-#    Updated: 2024/10/17 14:28:17 by epinaud          ###   ########.fr        #
+#    Updated: 2024/10/20 18:32:53 by epinaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,9 @@ OBJ = $(addprefix $(OBJ_DIR)/, $(LIB_SRC:.c=.o) $(PRINTF_FILES:.c=.o) $(GNL:.c=.
 
 OBJ_ALL = $(addprefix $(OBJ_DIR)/, $(LIB_SRC:.c=.o) $(BONUS_SRC:.c=.o))
 
-CFLAGS = -Wall -Wextra -Werror -I. -Iprintf/
+CFLAGS = -Wall -Wextra -Werror
+
+INCLUDES = -I. -Iprintf/
 
 NAME = libft.a
 
@@ -83,7 +85,7 @@ OBJ_DIR = .obj
 VPATH = printf
 
 $(OBJ_DIR)/%.o : %.c
-	$(CC) -c $(CFLAGS) -o $@ $<
+	$(CC) -c $(CFLAGS) $(INCLUDES) -o $@ $<
 
 all: $(NAME)
 
