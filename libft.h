@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2024/10/17 12:41:04 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/10/26 02:45:16 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <limits.h>
 # include <stdarg.h>
 # include <errno.h>
+# include <fcntl.h>
 # include "printf.h"
 
 # ifndef GNL_BUFFSIZ
@@ -81,6 +82,7 @@ void	ft_putstrcap_fd(char *s, size_t cap, int fd);
 
 //Memory
 char	**ft_clean_memtree(char **ptr);
+void	*ft_realloc(void *ptr, size_t newsize);
 
 //Chained Lists
 typedef struct s_list

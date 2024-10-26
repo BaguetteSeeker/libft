@@ -6,14 +6,14 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2024/10/20 18:30:03 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/10/20 19:44:58 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRINTF_H
 # define PRINTF_H
-
 # include "libft.h"
+
 //Bonus
 typedef struct s_directives
 {
