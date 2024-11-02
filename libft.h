@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2024/10/31 18:18:14 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/11/02 15:31:57 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,8 +81,10 @@ char	*ft_itoa_base(long int n, char *base, ...);
 void	ft_putstrcap_fd(char *s, size_t cap, int fd);
 
 //Memory
+size_t	ft_ptrlen(const char **ptr);
 char	**ft_clean_memtree(char **ptr);
 void	*ft_realloc(void *ptr, size_t newsize);
+void	put_addrlst(char **ptr);
 
 //Chained Lists
 typedef struct s_list
