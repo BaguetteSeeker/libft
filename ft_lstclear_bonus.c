@@ -6,15 +6,15 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 00:08:26 by epinaud           #+#    #+#             */
-/*   Updated: 2024/06/06 00:50:06 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/11/05 12:50:55 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lnkdlst.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(LL_TYP **lst, void (*del)(LL_TYP *))
 {
-	t_list	*tmplst;
+	LL_TYP	*tmplst;
 
 	if (!del || !lst)
 		return ;

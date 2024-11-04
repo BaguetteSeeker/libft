@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
+/*   lld_struct.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/06 01:12:11 by epinaud           #+#    #+#             */
-/*   Updated: 2024/11/05 12:51:13 by epinaud          ###   ########.fr       */
+/*   Created: 2024/11/05 12:30:59 by epinaud           #+#    #+#             */
+/*   Updated: 2024/11/05 13:16:39 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lnkdlst.h"
+#ifndef LLD_STRUCT_H
+# define LLD_STRUCT_H
+# include "stdlib.h"
 
-LL_TYP	*ft_lstmap(LL_TYP *lst, LL_TYP*(*f)(LL_TYP *), void (*del)(LL_TYP *))
+typedef struct s_list
 {
-	LL_TYP	*nlst;
-	LL_TYP	*nstart;
+	void			*content;
+	struct s_list	*next;
+}			t_list;
+# define LL_TYP t_list
 
-	if (!f || !del)
-		return (NULL);
-	nstart = NULL;
-	while (lst)
-	{
-		nlst = ft_lstnew((*f)(lst));
-		if (nlst)
-		{
-			ft_lstadd_back(&nstart, nlst);
-			lst = lst->next;
-			continue ;
-		}
-		ft_lstclear(&nstart, del);
-		lst = NULL;
-		return (NULL);
-	}
-	return (nstart);
-}
+# ifndef LL_TYP
+#  define LL_TYP t_list
+# endif
+#endif

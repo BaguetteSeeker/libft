@@ -6,15 +6,15 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 22:44:32 by epinaud           #+#    #+#             */
-/*   Updated: 2024/06/05 23:15:29 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/11/05 12:50:45 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lnkdlst.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(LL_TYP **lst, LL_TYP *new)
 {
-	t_list	*blst;
+	LL_TYP	*blst;
 
 	if (!lst || !new)
 		return ;

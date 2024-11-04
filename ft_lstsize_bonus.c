@@ -6,13 +6,13 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 19:17:20 by epinaud           #+#    #+#             */
-/*   Updated: 2024/06/06 22:31:21 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/11/05 12:51:28 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lnkdlst.h"
 
-int	ft_lstsize(t_list *lst)
+int	ft_lstsize(LL_TYP *lst)
 {
 	int	count;
 
