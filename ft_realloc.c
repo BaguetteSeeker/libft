@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 01:17:35 by epinaud           #+#    #+#             */
-/*   Updated: 2024/11/04 14:31:28 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/11/12 05:48:47 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void	put_addrlst(char **ptr)
 {
 	int	i;
 
-	printf("Main ptr addr is %p —\n", ptr);
+	ft_printf("Main ptr addr is %p —\n", ptr);
 	i = 0;
 	while (ptr[i])
 	{
-		printf("Row %d addr is %p\n", i, ptr[i]);
+		ft_printf("Row %d addr is %p\n", i, ptr[i]);
 		i++;
 	}
 }
