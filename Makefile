@@ -6,7 +6,7 @@
 #    By: epinaud <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 16:30:14 by epinaud           #+#    #+#              #
-#    Updated: 2024/11/05 13:22:21 by epinaud          ###   ########.fr        #
+#    Updated: 2024/11/12 19:16:52 by epinaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,7 +73,7 @@ BONUS_SRC = ft_lstnew_bonus.c \
   
 OBJ = $(addprefix $(OBJ_DIR)/, $(LIB_SRC:.c=.o) $(PRINTF_FILES:.c=.o) $(GNL:.c=.o) $(BONUS_SRC:.c=.o)) 
 
-CFLAGS = -Wall -Wextra -Werror -ggdb3
+CFLAGS = -Wall -Wextra -Werror
 
 INCLUDES = -I. -I../ -Iprintf/
 
