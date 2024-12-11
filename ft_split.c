@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 19:43:19 by epinaud           #+#    #+#             */
-/*   Updated: 2024/09/29 17:18:51 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/12/11 21:52:22 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	**ft_split(const char *s, char c)
 			wrdlen = ft_strlen(s);
 		else
 			wrdlen = ft_strchr(s, c) - s;
-		slist[i++] = ft_substr(s, 0, wrdlen);
+		slist[i] = ft_substr(s, 0, wrdlen);
 		if (!slist[i++])
 			return (ft_clean_memtree(slist));
 		s += wrdlen;
