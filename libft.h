@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2024/11/14 06:28:21 by epinaud          ###   ########.fr       */
+/*   Updated: 2024/12/20 04:35:14 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(long int n, int fd, ...);
 
 //Personnal add-ons
+void	ft_swap(long *val1, long *val2);
 int		ft_minint(int a, int b);
 int		ft_maxint(int a, int b);
 size_t	ft_count_digits(char *str);
@@ -79,6 +80,11 @@ int		ft_base_integrity(char *base);
 int		ft_atoi_base(char *str, char *base);
 char	*ft_itoa_base(long int n, char *base, ...);
 void	ft_putstrcap_fd(char *s, size_t cap, int fd);
+
+//Arrays
+int		in_array(int val, int tab[], size_t siz);
+int		array_min(int arr[], size_t siz);
+int		array_max(int arr[], size_t siz);
 
 //Memory
 size_t	ft_ptrlen(const char **ptr);

@@ -6,7 +6,7 @@
 #    By: epinaud <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 16:30:14 by epinaud           #+#    #+#              #
-#    Updated: 2024/11/12 19:16:52 by epinaud          ###   ########.fr        #
+#    Updated: 2024/12/20 04:36:23 by epinaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,8 @@ LIB_SRC = ft_isalpha.c \
 		ft_min_max.c \
 		ft_clean_memtree.c \
 		ft_realloc.c \
+		ft_arrays.c \
+		ft_swap.c
 
 PRINTF_FILES = printf.c \
 		ft_print_argument.c \
