@@ -6,11 +6,11 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 23:49:59 by epinaud           #+#    #+#             */
-/*   Updated: 2024/11/05 12:50:59 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/01/03 17:58:24 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lnkdlst.h"
+#include "linked_lists.h"
 
 void	ft_lstdelone(LL_TYP *lst, void (*del)(LL_TYP *lst))
 {

@@ -6,11 +6,11 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 01:12:11 by epinaud           #+#    #+#             */
-/*   Updated: 2024/11/05 12:51:13 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/01/03 17:58:24 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lnkdlst.h"
+#include "linked_lists.h"
 
 LL_TYP	*ft_lstmap(LL_TYP *lst, LL_TYP*(*f)(LL_TYP *), void (*del)(LL_TYP *))
 {

@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lnkdlst.h                                          :+:      :+:    :+:   */
+/*   linked_lists.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:35:30 by epinaud           #+#    #+#             */
-/*   Updated: 2024/11/05 12:59:27 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/01/03 17:59:08 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #define XSTR(x) STR(x)
-// #define STR(x) #x
-// #pragma message "The value of lsttype: " XSTR(LL_TYP)
-#ifndef LNKDLST_H
-# define LNKDLST_H "lnkdlst.h"
+#ifndef LINKED_LISTS_H
+# define LINKED_LISTS_H
 # include "stdlib.h"
-# include "../lld_struct.h"
+# include "../linked_list.h"
 # ifndef LL_TYP
 
 //use upper header to define macro
@@ -27,6 +24,9 @@ typedef struct s_list
 }			t_list;
 #  define LL_TYP t_list
 # endif
+// #define XSTR(x) STR(x)
+// #define STR(x) #x
+// #pragma message "The value of lsttype: " XSTR(LL_TYP)
 
 LL_TYP		*ft_lstnew(LL_TYP *content);
 void		ft_lstadd_front(LL_TYP **lst, LL_TYP *new);

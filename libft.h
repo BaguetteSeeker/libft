@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2024/12/20 04:35:14 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/01/03 17:58:45 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <errno.h>
 # include <fcntl.h>
 # include "printf.h"
-# include "lnkdlst.h"
+# include "linked_lists.h"
 
 # ifndef GNL_BUFFSIZ
 #  define GNL_BUFFSIZ 100
