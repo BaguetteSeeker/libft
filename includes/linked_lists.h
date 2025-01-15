@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:35:30 by epinaud           #+#    #+#             */
-/*   Updated: 2025/01/15 02:42:08 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/01/15 18:49:37 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LINKED_LISTS_H
 # include "stdlib.h"
 
-//use upper header to define the following macro
 # ifndef LL_TYP
 typedef struct s_list
 {
@@ -23,9 +22,6 @@ typedef struct s_list
 }			t_list;
 #  define LL_TYP t_list
 # endif
-// #define XSTR(x) STR(x)
-// #define STR(x) #x
-// #pragma message "The value of lsttype: " XSTR(LL_TYP)
 
 LL_TYP		*ft_lstnew(LL_TYP *content);
 void		ft_lstadd_front(LL_TYP **lst, LL_TYP *new);
