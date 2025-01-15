@@ -6,14 +6,14 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:35:30 by epinaud           #+#    #+#             */
-/*   Updated: 2025/01/14 13:11:59 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/01/15 02:42:08 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LINKED_LISTS_H
 # define LINKED_LISTS_H
 # include "stdlib.h"
-# include "../../linked_list.h"
+
 //use upper header to define the following macro
 # ifndef LL_TYP
 typedef struct s_list
