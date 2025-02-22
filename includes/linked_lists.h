@@ -6,22 +6,14 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:35:30 by epinaud           #+#    #+#             */
-/*   Updated: 2025/01/15 18:49:37 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/02/22 22:33:38 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LINKED_LISTS_H
 # define LINKED_LISTS_H
 # include "stdlib.h"
-
-# ifndef LL_TYP
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}			t_list;
-#  define LL_TYP t_list
-# endif
+# include "../../ll_typ.h"
 
 LL_TYP		*ft_lstnew(LL_TYP *content);
 void		ft_lstadd_front(LL_TYP **lst, LL_TYP *new);

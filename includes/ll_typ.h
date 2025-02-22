@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ll_typ.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/04 19:26:03 by epinaud           #+#    #+#             */
-/*   Updated: 2025/02/22 22:34:44 by epinaud          ###   ########.fr       */
+/*   Created: 2025/02/22 22:04:52 by epinaud           #+#    #+#             */
+/*   Updated: 2025/02/22 22:35:01 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "linked_lists.h"
-
-LL_TYP	*ft_lstnew(LL_TYP *content)
+// #define XSTR(x) STR(x)
+// #define STR(x) #x
+// #pragma message "The value of lsttype: " XSTR(LL_TYP)
+# ifndef LL_TYP
+#  define LL_TYP t_list
+typedef struct s_list
 {
-	LL_TYP	*list;
-
-	list = malloc(sizeof(LL_TYP));
-	if (!list)
-		return (NULL);
-	*list = *content;
-	list->next = NULL;
-	return (list);
-}
+	void			*content;
+	struct s_list	*next;
+}			t_list;
+# endif

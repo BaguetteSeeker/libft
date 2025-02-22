@@ -6,7 +6,7 @@
 #    By: epinaud <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 16:30:14 by epinaud           #+#    #+#              #
-#    Updated: 2025/01/15 03:05:01 by epinaud          ###   ########.fr        #
+#    Updated: 2025/02/22 22:42:52 by epinaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,7 +78,7 @@ OBJ = $(addprefix $(OBJ_DIR)/, $(LIB_SRC:.c=.o) \
 
 CFLAGS = -Wall -Wextra -Werror
 
-INCLUDES = -I. -Iincludes/
+INCLUDES = -I../ -I. -Iincludes/
 
 NAME = libft.a
 
@@ -92,7 +92,7 @@ $(OBJ_DIR)/%.o : %.c
 all: $(NAME)
 
 $(NAME): $(OBJ_DIR) $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+	@ar rcs $(NAME) $(OBJ)
 
 .obj:
 	@mkdir -p .obj
