@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2024/10/20 19:44:58 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/03/17 17:18:49 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ typedef struct s_directives
 
 //Mandatory
 int				ft_printf(const char *str, ...);
+int				ft_dprintf(int fd, const char *str, ...);
 int				ft_print_arg(va_list *arg, t_directives dirs);
 
 //Bonus

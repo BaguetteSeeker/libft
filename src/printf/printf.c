@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 16:42:38 by epinaud           #+#    #+#             */
-/*   Updated: 2024/09/30 11:30:12 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/03/20 22:17:12 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,11 @@ static int	ft_print_argdirs(size_t *strlen, va_list *arg, t_directives dirs)
 	return (dirs.strlen);
 }
 
-int	ft_printf(const char *str, ...)
+static int	parse_input(const char *str, va_list *args)
 {
-	va_list			args;
 	size_t			strlen;
 	t_directives	dirs;
 
-	if (!str)
-		return (0);
-	va_start(args, str);
 	strlen = 0;
 	while (*str)
 	{
@@ -66,13 +62,38 @@ int	ft_printf(const char *str, ...)
 		{
 			str++;
 			dirs = ft_init_directives(dirs);
-			str += ft_parse_dirs((char *)str, &args, &dirs).offset;
-			ft_print_argdirs(&strlen, &args, dirs);
+			str += ft_parse_dirs((char *)str, args, &dirs).offset;
+			ft_print_argdirs(&strlen, args, dirs);
 			continue ;
 		}
 		ft_putchar_fd(*str++, 1);
 		strlen++;
 	}
-	va_end(args);
 	return (strlen);
+}
+
+int	ft_printf(const char *str, ...)
+{
+	va_list	args;
+	int		outputlen;
+
+	if (!str)
+		return (0);
+	va_start(args, str);
+	outputlen = parse_input(str, &args);
+	va_end(args);
+	return (outputlen);
+}
+
+int	ft_dprintf(int fd, const char *str, ...)
+{
+	va_list	args;
+	int		outputlen;
+
+	va_start(args, str);
+	dup2(fd, STDOUT_FILENO);
+	outputlen = parse_input(str, &args);
+	dup2(STDOUT_FILENO, fd);
+	va_end(args);
+	return (outputlen);
 }
