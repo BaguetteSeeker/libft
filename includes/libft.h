@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2025/02/21 12:54:12 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/03/24 11:40:34 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,10 +88,13 @@ int		array_min(int arr[], size_t siz);
 int		array_max(int arr[], size_t siz);
 
 //Memory
-size_t	ft_ptrlen(const char **ptr);
+size_t	ft_ptrlen(const void **ptr);
 char	**ft_clean_memtree(char **ptr);
 void	*ft_realloc(void *ptr, size_t newsize);
 void	put_addrlst(char **ptr);
+
+//Printing
+void	recurse_put(char **ptr);
 
 char	*get_next_line(int fd);
 #endif

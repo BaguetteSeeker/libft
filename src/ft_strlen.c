@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 22:10:19 by epinaud           #+#    #+#             */
-/*   Updated: 2024/11/02 14:23:10 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/03/24 11:40:46 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-size_t	ft_ptrlen(const char **ptr)
+size_t	ft_ptrlen(const void **ptr)
 {
 	size_t	i;
 
