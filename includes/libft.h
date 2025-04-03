@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2025/03/24 11:40:34 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/04/02 16:13:13 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ int		ft_atoi_base(char *str, char *base);
 char	*ft_itoa_base(long int n, char *base, ...);
 void	ft_putstrcap_fd(char *s, size_t cap, int fd);
 char	*ft_strocc(const char *s, const char *occ);
+char	*ft_strrnstr(const char *haystack, const char *needle, size_t n);
 
 //Arrays
 int		in_array(int val, int tab[], size_t siz);
