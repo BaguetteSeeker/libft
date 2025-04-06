@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 18:36:30 by epinaud           #+#    #+#             */
-/*   Updated: 2025/03/24 11:37:19 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/04/05 20:55:19 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,5 @@ void	recurse_put(char **ptr)
 	ft_printf("Recurse printing content within %p addr :\n", ptr);
 	while (*ptr)
 		ft_putendl_fd(*ptr++, STDOUT_FILENO);
-	return ;	
+	return ;
 }

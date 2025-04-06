@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2025/04/02 16:13:13 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/04/05 21:04:01 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,9 @@ void	put_addrlst(char **ptr);
 //Printing
 void	recurse_put(char **ptr);
 
+//Strings
+char	*ft_strjoin2(char const *s1, char const *s2, char const *s3);
+
+//Read
 char	*get_next_line(int fd);
 #endif
