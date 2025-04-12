@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 04:26:15 by epinaud           #+#    #+#             */
-/*   Updated: 2024/12/20 04:35:34 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/04/12 13:43:09 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	array_max(int arr[], size_t siz)
 	return (max);
 }
 
-int	in_array(int val, int tab[], size_t siz)
+int	find_pos(int val, int tab[], size_t siz)
 {
 	int	pos;
 
@@ -56,4 +56,23 @@ int	in_array(int val, int tab[], size_t siz)
 		pos++;
 	}
 	return (-1);
+}
+
+int	in_array(int val, int tab[], size_t siz)
+{
+	size_t	pos;
+
+	pos = 0;
+	while (pos != siz)
+	{
+		if (tab[pos] == val)
+			return (1);
+		pos++;
+	}
+	return (0);
+}
+
+size_t	nb_elems(int arr[], size_t arr_bytnbr)
+{
+	return (arr_bytnbr / sizeof(*arr));
 }

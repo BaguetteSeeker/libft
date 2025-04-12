@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2025/04/05 21:04:01 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/04/12 13:40:39 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,10 @@ char	*ft_strrnstr(const char *haystack, const char *needle, size_t n);
 
 //Arrays
 int		in_array(int val, int tab[], size_t siz);
+int		find_pos(int val, int tab[], size_t siz);
 int		array_min(int arr[], size_t siz);
 int		array_max(int arr[], size_t siz);
+size_t	nb_elems(int arr[], size_t arr_bytnbr);
 
 //Memory
 size_t	ft_ptrlen(const void **ptr);
