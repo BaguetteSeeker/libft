@@ -6,15 +6,15 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 22:44:32 by epinaud           #+#    #+#             */
-/*   Updated: 2025/01/03 17:58:24 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/04/20 00:32:30 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "linked_lists.h"
 
-void	ft_lstadd_back(LL_TYP **lst, LL_TYP *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	LL_TYP	*blst;
+	t_list	*blst;
 
 	if (!lst || !new)
 		return ;

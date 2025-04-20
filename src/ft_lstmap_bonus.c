@@ -6,16 +6,16 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 01:12:11 by epinaud           #+#    #+#             */
-/*   Updated: 2025/01/03 17:58:24 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/04/20 00:32:30 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "linked_lists.h"
 
-LL_TYP	*ft_lstmap(LL_TYP *lst, LL_TYP*(*f)(LL_TYP *), void (*del)(LL_TYP *))
+t_list	*ft_lstmap(t_list *lst, t_list*(*f)(t_list *), void (*del)(t_list *))
 {
-	LL_TYP	*nlst;
-	LL_TYP	*nstart;
+	t_list	*nlst;
+	t_list	*nstart;
 
 	if (!f || !del)
 		return (NULL);

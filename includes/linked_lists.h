@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:35:30 by epinaud           #+#    #+#             */
-/*   Updated: 2025/02/22 22:33:38 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/04/20 00:38:00 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,23 @@
 # include "stdlib.h"
 # include "../../ll_typ.h"
 
-LL_TYP		*ft_lstnew(LL_TYP *content);
-void		ft_lstadd_front(LL_TYP **lst, LL_TYP *new);
-int			ft_lstsize(LL_TYP *lst);
-LL_TYP		*ft_lstlast(LL_TYP *lst);
-void		ft_lstadd_back(LL_TYP **lst, LL_TYP *new);
-void		ft_lstdelone(LL_TYP *lst, void (*del)(LL_TYP *));
-void		ft_lstclear(LL_TYP **lst, void (*del)(LL_TYP *));
-void		ft_lstiter(LL_TYP *lst, void (*f)(LL_TYP *));
-LL_TYP		*ft_lstmap(LL_TYP *lst, LL_TYP *(*f)(LL_TYP *),
-				void (*del)(LL_TYP *));
+// #define XSTR(x) STR(x)
+// #define STR(x) #x
+// #pragma message "The value of lsttype: " XSTR(t_list)
+typedef struct s_list
+{
+    void            *content;
+    struct s_list   *next;
+} t_list;
+
+t_list		*ft_lstnew(void *content);
+void		ft_lstadd_front(t_list **lst, t_list *new);
+int			ft_lstsize(t_list *lst);
+t_list		*ft_lstlast(t_list *lst);
+void		ft_lstadd_back(t_list **lst, t_list *new);
+void		ft_lstdelone(t_list *lst, void (*del)(t_list *));
+void		ft_lstclear(t_list **lst, void (*del)(t_list *));
+void		ft_lstiter(t_list *lst, void (*f)(t_list *));
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *),
+				void (*del)(t_list *));
 #endif

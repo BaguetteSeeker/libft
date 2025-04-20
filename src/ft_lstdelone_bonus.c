@@ -6,13 +6,13 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 23:49:59 by epinaud           #+#    #+#             */
-/*   Updated: 2025/01/03 17:58:24 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/04/20 00:32:30 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "linked_lists.h"
 
-void	ft_lstdelone(LL_TYP *lst, void (*del)(LL_TYP *lst))
+void	ft_lstdelone(t_list *lst, void (*del)(t_list *lst))
 {
 	if (!del)
 		return ;
