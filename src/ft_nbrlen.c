@@ -6,12 +6,13 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 01:19:34 by epinaud           #+#    #+#             */
-/*   Updated: 2024/10/02 15:55:52 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/04/29 12:24:53 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Returns the amount of digits within a decimal value, including the sign
 size_t	ft_nbrlen(long int nbr)
 {
 	size_t	count;
@@ -32,6 +33,7 @@ size_t	ft_nbrlen(long int nbr)
 	return (count);
 }
 
+//Returns the amount of digits within a decimal value, excluding the sign
 size_t	ft_nbrdig(long int nbr)
 {
 	size_t	count;

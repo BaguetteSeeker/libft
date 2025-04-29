@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2025/04/12 13:40:39 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/04/29 19:58:39 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,12 +92,6 @@ size_t	nb_elems(int arr[], size_t arr_bytnbr);
 
 //Memory
 size_t	ft_ptrlen(const void **ptr);
-char	**ft_clean_memtree(char **ptr);
-void	*ft_realloc(void *ptr, size_t newsize);
-void	put_addrlst(char **ptr);
-
-//Printing
-void	recurse_put(char **ptr);
 
 //Strings
 char	*ft_strjoin2(char const *s1, char const *s2, char const *s3);

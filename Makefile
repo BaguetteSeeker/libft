@@ -6,7 +6,7 @@
 #    By: epinaud <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 16:30:14 by epinaud           #+#    #+#              #
-#    Updated: 2025/02/22 22:42:52 by epinaud          ###   ########.fr        #
+#    Updated: 2025/04/29 12:36:46 by epinaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ LIB_SRC = ft_isalpha.c \
 		ft_base_integrity.c \
 		ft_check_dup.c \
 		ft_min_max.c \
-		ft_clean_memtree.c \
+		ft_dynarr.c \
 		ft_realloc.c \
 		ft_arrays.c \
 		ft_swap.c
