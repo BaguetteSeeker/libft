@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2025/04/29 19:58:39 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/05/03 17:58:19 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,8 +90,14 @@ int		array_min(int arr[], size_t siz);
 int		array_max(int arr[], size_t siz);
 size_t	nb_elems(int arr[], size_t arr_bytnbr);
 
-//Memory
+//Dynamic Arrays
 size_t	ft_ptrlen(const void **ptr);
+char	**ft_free_dynarr(char **ptr);
+void	put_dynarr_addr(char **ptr);
+void	put_recurse_dynarr(char **ptr);
+
+//Memory
+void	*ft_realloc(void *ptr, size_t newsize);
 
 //Strings
 char	*ft_strjoin2(char const *s1, char const *s2, char const *s3);
