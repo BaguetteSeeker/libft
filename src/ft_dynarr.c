@@ -47,3 +47,20 @@ void	put_recurse_dynarr(char **ptr)
 		ft_putendl_fd(*ptr++, STDOUT_FILENO);
 	return ;
 }
+
+//Searches for strlen(str) char the string str in the dynamic array lst
+char	*ft_lststrn(char **lst, char *str, size_t n)
+{
+	int		i;
+
+	if (!lst)
+		return (NULL);
+	i = 0;
+	while (lst[i])
+	{
+		if (ft_strncmp(str, lst[i], n) == 0)
+			return (lst[i]);
+		i++;
+	}
+	return (NULL);
+}

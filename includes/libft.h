@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2025/05/03 17:58:19 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/05/04 11:57:00 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,11 +95,13 @@ size_t	ft_ptrlen(const void **ptr);
 char	**ft_free_dynarr(char **ptr);
 void	put_dynarr_addr(char **ptr);
 void	put_recurse_dynarr(char **ptr);
+char	*ft_lststrn(char **lst, char *str, size_t n);
 
 //Memory
 void	*ft_realloc(void *ptr, size_t newsize);
 
 //Strings
+char	*strip_outquotes(char *str);
 char	*ft_strjoin2(char const *s1, char const *s2, char const *s3);
 
 //Read
