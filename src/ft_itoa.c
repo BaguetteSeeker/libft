@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 18:05:27 by epinaud           #+#    #+#             */
-/*   Updated: 2024/10/29 14:27:45 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/05/05 16:32:37 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_itoa(int n)
 
 	lnum = n;
 	if (lnum == 0)
-		return ("0");
+		return (ft_strdup("0"));
 	count = ft_nbrlen(n);
 	str = malloc((count + 1) * sizeof(char));
 	if (!str)
