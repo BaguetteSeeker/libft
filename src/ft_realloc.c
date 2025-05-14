@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 01:17:35 by epinaud           #+#    #+#             */
-/*   Updated: 2025/05/07 12:11:33 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/05/14 19:26:49 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 // cursize = (ft_ptrlen(ptr) + 1) * sizeof(*ptr);
 // if (newsize <= cursize)
 // 	return (ptr);
-void	*ft_realloc(void *ptr, size_t newsize)
+void	*ft_realloc(void *ptr, size_t newsize, size_t oldsiz)
 {
 	void	*newptr;
 
@@ -25,7 +25,9 @@ void	*ft_realloc(void *ptr, size_t newsize)
 	else if (!ptr)
 		return (malloc(newsize));
 	newptr = malloc(newsize);
-	ft_memcpy(newptr, ptr, ft_strlen(ptr) + 1);
+	if (!newptr)
+		return (NULL);
+	ft_memcpy(newptr, ptr, oldsiz);
 	free(ptr);
 	return (newptr);
 }
