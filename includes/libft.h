@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2025/05/14 19:28:07 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/05/15 11:06:02 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,7 @@ void	*ft_realloc(void *ptr, size_t newsize, size_t oldsiz);
 
 //Strings
 char	*strip_outquotes(char *str);
+char	*strstripchr(char *str, char *chrs, size_t n);
 char	*ft_strjoin2(char const *s1, char const *s2, char const *s3);
 
 //Read

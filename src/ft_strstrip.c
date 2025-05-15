@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 10:45:49 by epinaud           #+#    #+#             */
-/*   Updated: 2025/05/04 10:47:57 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/05/16 13:38:20 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,24 @@ char	*strip_outquotes(char *str)
 		}
 		else
 			str[j++] = str[i++];
+	}
+	str[j] = '\0';
+	return (str);
+}
+
+char	*strstripchr(char *str, char *chrs, size_t n)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (str[i])
+	{
+		if (!ft_strchr(chrs, str[i]) || i >= (int)n)
+			str[j++] = str[i++];
+		else
+			i++;
 	}
 	str[j] = '\0';
 	return (str);
