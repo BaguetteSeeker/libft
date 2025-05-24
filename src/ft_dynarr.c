@@ -53,7 +53,7 @@ char	*ft_lststrn(char **lst, char *str, size_t n)
 {
 	int		i;
 
-	if (!lst)
+	if (!lst || n == 0)
 		return (NULL);
 	i = 0;
 	while (lst[i])
