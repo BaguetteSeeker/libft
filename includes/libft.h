@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2025/05/15 11:06:02 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/05/27 15:41:43 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ size_t	ft_ptrlen(const void **ptr);
 char	**ft_free_dynarr(char **ptr);
 void	put_dynarr_addr(char **ptr);
 void	put_recurse_dynarr(char **ptr);
-char	*ft_lststrn(char **lst, char *str, size_t n);
+char	*ft_lststr(char **lst, char *str);
 
 //Memory
 void	*ft_realloc(void *ptr, size_t newsize, size_t oldsiz);

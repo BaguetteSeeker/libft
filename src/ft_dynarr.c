@@ -48,17 +48,20 @@ void	put_recurse_dynarr(char **ptr)
 	return ;
 }
 
-//Searches for strlen(str) char the string str in the dynamic array lst
-char	*ft_lststrn(char **lst, char *str, size_t n)
+//Searches for the string *str in the dynamic array **lst
+char	*ft_lststr(char **lst, char *str)
 {
 	int		i;
+	size_t	strlen;
 
-	if (!lst || n == 0)
+	strlen = ft_strlen(str);
+	if (!lst || strlen == 0)
 		return (NULL);
 	i = 0;
 	while (lst[i])
 	{
-		if (ft_strncmp(str, lst[i], n) == 0)
+		if (ft_strncmp(str, lst[i], strlen) == 0
+			&& (size_t)(ft_strchr(lst[i], '=') - lst[i]) == strlen)
 			return (lst[i]);
 		i++;
 	}
