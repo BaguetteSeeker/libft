@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 10:45:49 by epinaud           #+#    #+#             */
-/*   Updated: 2025/05/16 13:38:20 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/06/09 00:42:52 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,26 @@ char	*strstripchr(char *str, char *chrs, size_t n)
 			str[j++] = str[i++];
 		else
 			i++;
+	}
+	str[j] = '\0';
+	return (str);
+}
+
+char	*strip_quotes(char *str)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (str[i])
+	{
+		if (!ft_strchr("\"\'", str[i]))
+		{
+			str[j] = str[i];
+			j++;
+		}
+		i++;
 	}
 	str[j] = '\0';
 	return (str);

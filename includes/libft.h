@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2025/06/01 12:02:19 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/06/09 00:43:09 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <stdarg.h>
 # include <errno.h>
 # include <fcntl.h>
+# include <termios.h>
 # include "printf.h"
 # include "linked_lists.h"
 
@@ -104,6 +105,7 @@ char	**strarr_insert(char **origin, char *target, char **insert);
 void	*ft_realloc(void *ptr, size_t newsize, size_t oldsiz);
 
 //Strings
+char	*strip_quotes(char *str);
 char	*strip_outquotes(char *str);
 char	*strstripchr(char *str, char *chrs, size_t n);
 char	*ft_strjoin2(char const *s1, char const *s2, char const *s3);
