@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2025/06/09 00:43:09 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/10/01 21:56:50 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdint.h>
 # include <limits.h>
 # include <stdarg.h>
+# include <stdbool.h>
 # include <errno.h>
 # include <fcntl.h>
 # include <termios.h>
@@ -78,6 +79,7 @@ size_t	ft_nbrdig(long int nbr);
 size_t	ft_putnbr_base_fd(unsigned long n, char *base, int fd);
 int		ft_check_dup(char *str);
 int		ft_base_integrity(char *base);
+int		ft_atof(const char *nptr, float *sum);
 int		ft_atoi_base(char *str, char *base);
 char	*ft_itoa_base(long int n, char *base, ...);
 void	ft_putstrcap_fd(char *s, size_t cap, int fd);
