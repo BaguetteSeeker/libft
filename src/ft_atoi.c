@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 18:45:30 by epinaud           #+#    #+#             */
-/*   Updated: 2025/10/08 23:36:22 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/10/22 20:56:46 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ static long	ft_powf(size_t pow, long n)
 	return (result);
 }
 
-int	ft_atof(const char *nptr, float *sum)
+int	ft_atof(const char *nptr, double *sum)
 {
 	int		exptln;
 	int		mantln;
@@ -83,8 +83,6 @@ int	ft_atof(const char *nptr, float *sum)
 	long	mantissa;
 
 	exponent = 0;
-	mantissa = 0;
-	exptln = 0;
 	mantissa = 0;
 	exptln = ft_atoi2(nptr, &exponent);
 	*sum += exponent;
@@ -95,6 +93,6 @@ int	ft_atof(const char *nptr, float *sum)
 		return (-1);
 	else if (mantln == 0)
 		return (exptln + mantln);
-	return (*sum += ((float)mantissa
+	return (*sum += ((double)mantissa
 			/ ft_powf(10, ft_nbrdig(mantissa))), exptln + mantln + 1);
 }

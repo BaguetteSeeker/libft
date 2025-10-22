@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 19:06:08 by epinaud           #+#    #+#             */
-/*   Updated: 2025/10/08 23:30:05 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/10/22 20:57:04 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ size_t	ft_nbrdig(long int nbr);
 size_t	ft_putnbr_base_fd(unsigned long n, char *base, int fd);
 int		ft_check_dup(char *str);
 int		ft_base_integrity(char *base);
-int		ft_atof(const char *nptr, float *sum);
+int		ft_atof(const char *nptr, double *sum);
 int		ft_atoi_base(char *str, char *base);
 char	*ft_itoa_base(long int n, char *base, ...);
 void	ft_putstrcap_fd(char *s, size_t cap, int fd);
