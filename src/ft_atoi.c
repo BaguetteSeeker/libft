@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 18:45:30 by epinaud           #+#    #+#             */
-/*   Updated: 2025/11/26 00:47:26 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/11/26 02:11:43 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_atoi(const char *nptr)
 	return (sum *= sign);
 }
 
-int	ft_atoi2(const char *nptr, long *sum)
+int	ft_atoi2(const char *nptr, int *sum)
 {
 	size_t	i;
 	int		sign;
