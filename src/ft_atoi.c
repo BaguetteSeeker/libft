@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 18:45:30 by epinaud           #+#    #+#             */
-/*   Updated: 2025/11/26 02:11:43 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/11/27 12:02:06 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ int	ft_atof(const char *nptr, double *sum)
 	exptln = ft_atoi_unsigned(nptr, &exponent);
 	*sum += exponent;
 	if (exptln < 1 || nptr[exptln] != '.')
-		return (exptln);
+		return (*sum *= sign, exptln);
 	mantln = ft_atoi_unsigned(&nptr[exptln + 1], &mantissa);
 	if (mantln == -1)
 		return (-1);
