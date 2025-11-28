@@ -6,7 +6,7 @@
 /*   By: epinaud <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 18:45:30 by epinaud           #+#    #+#             */
-/*   Updated: 2025/11/27 12:02:06 by epinaud          ###   ########.fr       */
+/*   Updated: 2025/11/28 02:41:15 by epinaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,22 @@ static long	ft_powf(size_t pow, long n)
 	return (result);
 }
 
+// float	push_zeroes(long mantissa, size_t mantln)
+// {
+// 	double	number;
+// 	size_t	diff;
+
+// 	diff = mantln - nbrdig(mantissa);
+
+// 	while (diff != 0)
+// 	{
+// 		mantissa /= 10;
+// 		diff--;
+// 	}
+// 	return ();
+
+// }
+
 int	ft_atof(const char *nptr, double *sum)
 {
 	int		exptln;
@@ -120,6 +136,6 @@ int	ft_atof(const char *nptr, double *sum)
 		return (-1);
 	else if (mantln == 0)
 		return (exptln + mantln);
-	*sum += (float)mantissa / ft_powf(10, ft_nbrdig(mantissa));
+	*sum += (float)mantissa / ft_powf(10, ft_strlen(&nptr[exptln + 1]));
 	return (*sum *= sign, exptln + mantln + 1);
 }
